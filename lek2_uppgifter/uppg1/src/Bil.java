@@ -78,4 +78,19 @@ public class Bil {
         }
     }
 
+    public void ökaHastighet(int ökning) {
+        if (ökning >= 0) {
+            hastighet += ökning;
+        } else {
+            throw new IllegalArgumentException("ERROR: Vg ange en giltig hastighetsökning (positiv int)");
+        }
+    }
+
+    public void bromsa(int minskning) {
+        if (minskning >= 0 || minskning < hastighet) {
+            hastighet -= minskning;
+        } else {
+            throw new IllegalArgumentException("ERROR: Vg ange en positiv giltig inbromsning som är mindre än nuvarande hastighet: " + hastighet);
+        }
+    }
 }
