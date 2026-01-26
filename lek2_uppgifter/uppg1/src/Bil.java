@@ -44,5 +44,38 @@ public class Bil {
         return årsmodell;
     }
 
+    public void setModell(String modell) {
+        if (modell != null || !modell.isBlank()) {
+            this.modell = modell;
+        } else {
+            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string");
+        }
+    }
+
+    public void setMärke(String märke) {
+        if (modell != null || !märke.isBlank()) {
+            this.märke = märke;
+        } else {
+            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string");
+        }
+    }
+
+    // INGEN SETT för reg_nr, denna identifierar bilen
+
+    public void setÅrsmodell(int årsmodell) {
+        if (årsmodell > 1860 || årsmodell < Year.now().getValue()) {
+            this.årsmodell = årsmodell;
+        } else {
+            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string)");
+        }
+    }
+
+    public void setHastighet(int hastighet) {
+        if (hastighet > 0 || hastighet < 800) {
+            this.hastighet = hastighet;
+        } else {
+            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string)");
+        }
+    }
 
 }
