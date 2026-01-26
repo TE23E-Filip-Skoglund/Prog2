@@ -56,7 +56,7 @@ public class Bil {
         if (modell != null || !märke.isBlank()) {
             this.märke = märke;
         } else {
-            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string");
+            throw new IllegalArgumentException("Vg ange ett giltigt märke (string)");
         }
     }
 
@@ -66,7 +66,7 @@ public class Bil {
         if (årsmodell > 1860 || årsmodell <= Year.now().getValue()) {
             this.årsmodell = årsmodell;
         } else {
-            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string)");
+            throw new IllegalArgumentException("Vg ange ett giltigt årsmodell (int)");
         }
     }
 
@@ -74,7 +74,7 @@ public class Bil {
         if (hastighet > 0 || hastighet < 800) {
             this.hastighet = hastighet;
         } else {
-            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string)");
+            throw new IllegalArgumentException("Vg ange en giltig hastihget (int)");
         }
     }
 
