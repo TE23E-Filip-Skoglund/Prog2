@@ -93,4 +93,17 @@ public class Bil {
             throw new IllegalArgumentException("ERROR: Vg ange en positiv giltig inbromsning som är mindre än nuvarande hastighet: " + hastighet);
         }
     }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append(" | Märke: ").append(märke);
+        sb.append(" | Modell: ").append(modell);
+        sb.append(" | Regnummer: ").append(reg_nr);
+        sb.append(" | Årsmodell: ").append(årsmodell);
+
+        return sb.toString();
+    }
 }
