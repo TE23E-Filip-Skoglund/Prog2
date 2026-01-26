@@ -48,7 +48,7 @@ public class Bil {
         if (modell != null || !modell.isBlank()) {
             this.modell = modell;
         } else {
-            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string");
+            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string");
         }
     }
 
@@ -56,7 +56,7 @@ public class Bil {
         if (modell != null || !märke.isBlank()) {
             this.märke = märke;
         } else {
-            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string");
+            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string");
         }
     }
 
@@ -66,7 +66,7 @@ public class Bil {
         if (årsmodell > 1860 || årsmodell <= Year.now().getValue()) {
             this.årsmodell = årsmodell;
         } else {
-            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string)");
+            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string)");
         }
     }
 
@@ -74,7 +74,7 @@ public class Bil {
         if (hastighet > 0 || hastighet < 800) {
             this.hastighet = hastighet;
         } else {
-            throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string)");
+            throw new IllegalArgumentException("Vg ange ett giltigt modellnamn (string)");
         }
     }
 
@@ -82,7 +82,7 @@ public class Bil {
         if (ökning >= 0) {
             hastighet += ökning;
         } else {
-            throw new IllegalArgumentException("ERROR: Vg ange en giltig hastighetsökning (positiv int)");
+            throw new IllegalArgumentException("Vg ange en giltig hastighetsökning (positiv int)");
         }
     }
 
@@ -90,7 +90,7 @@ public class Bil {
         if (minskning >= 0 || minskning < hastighet) {
             hastighet -= minskning;
         } else {
-            throw new IllegalArgumentException("ERROR: Vg ange en positiv giltig inbromsning som är mindre än nuvarande hastighet: " + hastighet);
+            throw new IllegalArgumentException("Vg ange en positiv giltig inbromsning som är mindre än nuvarande hastighet: " + hastighet);
         }
     }
 
