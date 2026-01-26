@@ -63,7 +63,7 @@ public class Bil {
     // INGEN SETT för reg_nr, denna identifierar bilen
 
     public void setÅrsmodell(int årsmodell) {
-        if (årsmodell > 1860 || årsmodell < Year.now().getValue()) {
+        if (årsmodell > 1860 || årsmodell <= Year.now().getValue()) {
             this.årsmodell = årsmodell;
         } else {
             throw new IllegalArgumentException("ERROR: Vg ange ett giltigt modellnamn (string)");
