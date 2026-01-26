@@ -96,10 +96,9 @@ public class Bil {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         StringBuilder sb = new StringBuilder();
         
-        sb.append(" | Märke: ").append(märke);
+        sb.append("Märke: ").append(märke);
         sb.append(" | Modell: ").append(modell);
         sb.append(" | Regnummer: ").append(reg_nr);
         sb.append(" | Årsmodell: ").append(årsmodell);
