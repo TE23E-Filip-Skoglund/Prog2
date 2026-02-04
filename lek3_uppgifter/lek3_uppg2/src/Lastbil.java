@@ -18,4 +18,9 @@ public class Lastbil extends Vagfordon {
         this.lastkapacitet = lastkapacitet;
     }
 
+    // Other
+    @Override
+    public String toString() {
+        return super.toString() + " | Lastkapacitet: " + lastkapacitet;
+    }
 }

@@ -46,4 +46,16 @@ public class Vagfordon {
         this.vikt = vikt;
     }
 
+    // Other
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Regnr: ").append(regnr);
+        sb.append(" | Ägare: ").append(ägare);
+        sb.append(" | Vikt: ").append(vikt);
+        sb.append(" | Färg").append(färg);
+        return sb.toString();
+    }
+
 }
