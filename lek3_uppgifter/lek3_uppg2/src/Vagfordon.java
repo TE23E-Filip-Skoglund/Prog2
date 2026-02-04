@@ -31,7 +31,11 @@ public class Vagfordon {
 
     // Setters
     public void setRegnr(String regnr) {
-        this.regnr = regnr;
+        if (regnr.matches("[A-Za-z]{3}+[0-9]{3}+")) {
+            this.regnr = regnr;
+        } else {
+            throw new IllegalArgumentException("Regnr måste matcha: ABC 123");
+        }
     }
 
     public void setÄgare(String ägare) {
