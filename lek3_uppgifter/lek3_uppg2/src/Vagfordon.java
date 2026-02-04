@@ -1,31 +1,49 @@
-public class Vagfordon extends Fordon {
+public class Vagfordon {
 
-    private String miljoKlass;
-    private String typ;
+    protected String regnr;
+    protected String ägare;
+    protected String färg;
+    protected int vikt;
 
-    public Vagfordon(String regnr, String tillverkare, String modell, int år, String miljoKlass, String typ) {
-        super(regnr, tillverkare, modell, år);
-
-        this.miljoKlass = miljoKlass;
-        this.typ = typ;
+    public Vagfordon(String regnr, String ägare, String färg, int vikt) {
+        this.regnr = regnr;
+        this.ägare = ägare;
+        this.färg = färg;
+        this.vikt = vikt;
     }
 
     // Getters
-    public String getMiljoKlass() {
-        return miljoKlass;
+    public String getRegnr() {
+        return regnr;
     }
 
-    public String getTyp() {
-        return typ;
+    public String getÄgare() {
+        return ägare;
+    }
+
+    public String getFärg() {
+        return färg;
+    }
+
+    public int getVikt() {
+        return vikt;
     }
 
     // Setters
-    public void setMiljoKlass(String miljoKlass) {
-        this.miljoKlass = miljoKlass;
+    public void setRegnr(String regnr) {
+        this.regnr = regnr;
     }
 
-    public void setTyp(String typ) {
-        this.typ = typ;
+    public void setÄgare(String ägare) {
+        this.ägare = ägare;
+    }
+
+    public void setFärg(String färg) {
+        this.färg = färg;
+    }
+
+    public void setVikt(int vikt) {
+        this.vikt = vikt;
     }
 
 }
