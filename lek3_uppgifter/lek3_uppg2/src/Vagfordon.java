@@ -53,7 +53,7 @@ public class Vagfordon {
     // Other
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder().append("\n");
 
         sb.append("Regnr: ").append(regnr);
         sb.append(" | Ägare: ").append(ägare);

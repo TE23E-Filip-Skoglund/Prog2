@@ -88,10 +88,10 @@ String inputString(String msg, String regex) {
             if (regex == null || input.matches(regex)) {
                 return input;
             } else {
-                IO.print("Fel format, följ standard formatet");
+                IO.println("Fel format, följ standard formatet");
             }
         } else {
-            IO.print("Fel format, vg ange en String");
+            IO.println("Fel format, vg ange en String");
         }
     }
 }
