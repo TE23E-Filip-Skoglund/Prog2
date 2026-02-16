@@ -1,7 +1,7 @@
-public class Rektorer extends SkolPersoner {
+public class Rektor extends SkolPersoner {
     protected String befogan;
 
-    public Rektorer(String namn, int ålder, String skola, String befogan) {
+    public Rektor(String namn, int ålder, String skola, String befogan) {
         super(namn, ålder, skola);
 
         if (!befogan.isBlank()) {
