@@ -1,4 +1,4 @@
-public class Hund extends Djur {
+public class Hund extends Djur implements Dressering {
 
     public Hund() {
         super(5, 2000);
@@ -12,4 +12,21 @@ public class Hund extends Djur {
     public void spåra(String bytesDjur) {
         IO.println("spårar " + bytesDjur);
     }
+
+    @Override
+    public void apport() {
+        IO.println("Apport!");
+    }
+
+    @Override
+    public void kom() {
+        IO.println("Komsi komsi!");
+    }
+
+    @Override
+    public void sitt() {
+    IO.println("Sitt!");
+
+    }
+
 }

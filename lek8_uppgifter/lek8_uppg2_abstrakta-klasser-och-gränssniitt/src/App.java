@@ -20,6 +20,9 @@ void main() {
 
         if (djur instanceof Hund) {
             ((Hund)djur).spåra("Musen");
+            ((Hund)djur).apport();
+            ((Hund)djur).kom();
+            ((Hund)djur).sitt();
         } else if (djur instanceof Katt) {
             ((Katt)djur).leka("Hejsan");
         } else if (djur instanceof Mus) {

@@ -1,4 +1,4 @@
-public class Djur {
+abstract class Djur {
     protected double vikt;
     protected int energi;
     protected boolean lever;
@@ -25,8 +25,6 @@ public class Djur {
         }
     }
 
-    public String läte() {
-        return "duret låter";
-    }
+    abstract String läte();
 
 }
