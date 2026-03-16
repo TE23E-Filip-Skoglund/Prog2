@@ -10,6 +10,14 @@ void main() {
     HashSet<String> bannade = LäsInFil("bannlysta.txt");
     HashSet<String> volontärer = LäsInFil("volontärer.txt");
 
+    // Hitta de som är både VIP & Volontärer
+    HashSet<String> superVolontärer = volontärer;
+    superVolontärer.retainAll(vips);
+
+    // En lista med både VIPS och voluntärer
+    HashSet<String> VolonOVips = volontärer;
+    VolonOVips.addAll(vips);
+
     /* Program-loop */
     while (true) {
         String val = Menu();
@@ -19,7 +27,15 @@ void main() {
                 String read_epost = IO.readln("Ange epost att söka efter: ");
                 Sök(bannade, read_epost);
                 break;
+            case "2":
+                IO.println("\nPersoner som ska ha specialbadge: " + superVolontärer);
+                Vänta();
+                break;
             case "3":
+                IO.println("\nLista på VIPs och voluntärer : " + VolonOVips);
+                Vänta();
+                break;
+            case "4":
                 IO.println("Avslutar...");
                 System.exit(0);
             default:
@@ -34,15 +50,16 @@ static String Menu() {
     IO.println("""
             \n\n====================================
             1. Kontroll bannlysta
-            ...
-            3. Avsluta
+            2. Lista på specialbadges
+            3. Lista på de som både är VIPs och voluntärer
+            4. Avsluta
 
             """);
 
     while (true) {
         String val = IO.readln("Ange val: ");
 
-        if (val.matches("1|2|3")) {
+        if (val.matches("1|2|3|4")) {
             return val;
         } else {
             IO.println("Felaktig inmanting, vg ange ett val från menyn");
@@ -55,8 +72,10 @@ static void Sök(HashSet<String> set, String epost) {
 
     if (set.contains(epost)) {
         IO.println("Listan inehåller eposten!!");
+        Vänta();
     } else {
         IO.println("Listan inehåller inte eposten!!");
+        Vänta();
     }
 }
 
@@ -69,4 +88,11 @@ static HashSet<String> LäsInFil(String fil) {
         IO.println("Fel på fil, meddelande: " + e.getMessage());
     }
     return new HashSet<String>(Arrays.asList(temp_arr));
+}
+
+// Vänta på input
+static void Vänta() {
+    IO.println("\nTryck på enter för att fortsätta");
+    IO.readln();
+    IO.println("\n".repeat(50));
 }
