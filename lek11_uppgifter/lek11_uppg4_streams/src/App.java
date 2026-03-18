@@ -80,6 +80,36 @@ void main() {
         IO.println("Det finns en som heter Astra Nova bland kolonisterna");
     } else {
         IO.println("Det finns INGEN vid namn heter Astra Nova bland kolonisterna");
+    }
 
+
+    // Programloop
+    while (true) {
+        IO.println("""
+                \nSkriv ut följande:
+                1. alla "Scientists"
+                2. alla "Scientists" under 40
+                3. Avsluta
+                """);
+
+        String val = IO.readln();
+        if (val.matches("1|2")) {
+            switch (val) {
+                case "1":
+                    IO.println(scientists);
+                    break;
+                case "2":
+                    IO.println(scientistsUnder40);
+                    break;
+                case "3":
+                    IO.println("Avlsutar...");
+                    System.exit(0);
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            continue;
+        }
     }
 }
