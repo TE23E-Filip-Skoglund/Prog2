@@ -17,12 +17,23 @@ void main() {
 
         if (vald.getAntal() >= 1) {
             vald.sälj();
-            IO.println("SÅLD!!! :D");
+            IO.println("SÅLD!!! Vinst: " + vald.getPris() * 0.5);
             IO.println("Nytt saldo för " + vald.getNamn() + ": " + vald.getAntal());
         } else if (vald.getAntal() < 1) {
             IO.println("Varan är slut i lager, vill du köpa in? (ja/nej)");
-            if (IO.readln().toLowerCase().trim().matches("ja|nej")) {
-                String antal = IO.readln("Ange hur många? (1-5)");
+            if (IO.readln().toLowerCase().trim().matches("ja")) {
+                String antalString = IO.readln("Ange hur många? (1-5)");
+                int antal = 0;
+                try {
+                    antal = Integer.parseInt(antalString);
+
+                } catch (Exception e) {
+                    IO.println(e);
+                }
+                if (antal != 0) {
+                    vald.köp_in(antal);
+                }
+
             }
         }
     }
