@@ -14,19 +14,18 @@ void main() {
     /* Programloop */
     while (true) {
         Vara vald = väljVara(lager);
-       
-        if (vald.getAntal() == 0) {
+
+        if (vald.getAntal() >= 1) {
+            vald.sälj();
+            IO.println("SÅLD!!! :D");
+            IO.println("Nytt saldo för " + vald.getNamn() + ": " + vald.getAntal());
+        } else if (vald.getAntal() < 1) {
             IO.println("Varan är slut i lager, vill du köpa in? (ja/nej)");
             if (IO.readln().toLowerCase().trim().matches("ja|nej")) {
                 String antal = IO.readln("Ange hur många? (1-5)");
             }
-        
         }
-        
-
-
     }
-
 }
 
 static Vara väljVara(List<Vara> lager) {
@@ -37,7 +36,7 @@ static Vara väljVara(List<Vara> lager) {
             System.exit(0);
         }
         for (Vara vara : lager) {
-            if (vara.getNamn().matches(varonamn)) {
+            if (vara.getNamn().toLowerCase().matches(varonamn)) {
                 return vara;
             }
         }
